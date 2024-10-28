@@ -1,0 +1,215 @@
+/* exercise.css */
+
+.exercise-container {
+    padding: 20px;
+}
+
+.exercise-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.exercise-header h2 {
+    font-size: 1.8rem;
+    color: #004d40;
+    font-weight: bold;
+}
+
+.create-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #00796b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+    background-color: #004d40;
+}
+
+/* Data Table styling */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+    background-color: #e0f2f1;
+    color: #004d40;
+    font-weight: bold;
+}
+
+.data-table td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.data-table td video {
+    width: 100px;
+    border-radius: 5px;
+}
+
+.data-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button styling for Edit and Delete */
+.edit-button,
+.delete-button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-button {
+    background-color: #4CAF50;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button {
+    background-color: #f44336;
+    margin-left: 5px;
+}
+
+.delete-button:hover {
+    background-color: #e53935;
+}
+
+/* Pagination styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 5px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #607d8b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #455a64;
+}
+
+.pagination button.active {
+    background-color: #d32f2f;
+    font-weight: bold;
+    cursor: default;
+}
+
+/* Modal styling */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.modal h2 {
+    font-size: 1.8rem;
+    color: #004d40;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.modal input[type="text"],
+.modal textarea,
+.modal select,
+.modal input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.modal input[type="text"]:focus,
+.modal textarea:focus,
+.modal select:focus,
+.modal input[type="file"]:focus {
+    border-color: #00796b;
+    outline: none;
+}
+
+.modal button {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #00796b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: #004d40;
+}
+
+.modal button[type="button"]:last-child {
+    background-color: #ccc;
+    color: #333;
+    margin-top: 5px;
+}
+
+.modal button[type="button"]:last-child:hover {
+    background-color: #aaa;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    font-weight: bold;
+}

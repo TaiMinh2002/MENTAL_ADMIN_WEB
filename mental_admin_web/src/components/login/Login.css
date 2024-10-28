@@ -1,0 +1,138 @@
+body {
+    background-color: #FFD1B0;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/Users/mac/MENTAL_ADMIN_WEB/mental_admin_web/public/images/login_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-box {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    padding: 80px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: linear-gradient(90deg, #FEDCC5 0%, #FEDDC6 100%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+    flex: 1;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 70px;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    color: #FF5722;
+    text-decoration: none;
+}
+
+/* Phần đăng nhập bằng mạng xã hội */
+.social-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.google {
+    background-color: #DB4437;
+    color: white;
+}
+
+.github {
+    background-color: #333;
+    color: white;
+}
+
+.facebook {
+    background-color: #4267B2;
+    color: white;
+}
+
+.register-text {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-text a {
+    color: #FF5722;
+    text-decoration: none;
+}
+
+/* Phần hình ảnh bên phải */
+.login-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.message {
+    color: green;
+    margin-top: 10px;
+    font-size: 14px;
+}
