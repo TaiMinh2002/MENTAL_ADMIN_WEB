@@ -18,7 +18,7 @@ const Expert = () => {
     // State for new/existing expert form
     const [expertForm, setExpertForm] = useState({
         name: '',
-        specialization: '',
+        specialization: 0,
         bio: '',
         contact_info: '',
         phone_number: '',
@@ -79,7 +79,7 @@ const Expert = () => {
     const resetForm = () => {
         setExpertForm({
             name: '',
-            specialization: '',
+            specialization: 0,
             bio: '',
             contact_info: '',
             phone_number: '',
