@@ -21,6 +21,7 @@ const Exercise = () => {
         description: '',
         type: '',
         media_url: null,
+        thumbnail_url: null,
     });
 
     const types = [
@@ -77,6 +78,7 @@ const Exercise = () => {
             description: '',
             type: '',
             media_url: null,
+            thumbnail_url: null,
         });
     };
 
@@ -95,7 +97,8 @@ const Exercise = () => {
     };
 
     const handleFileChange = (e) => {
-        setExerciseForm((prev) => ({ ...prev, media_url: e.target.files[0] }));
+        const { name, files } = e.target;
+        setExerciseForm((prev) => ({ ...prev, [name]: files[0] }));
     };
 
     const handleSaveExercise = async () => {
@@ -147,6 +150,7 @@ const Exercise = () => {
                             <tr>
                                 <th>ID</th>
                                 <th>Media</th>
+                                <th>Thumbnail</th>
                                 <th>Title</th>
                                 <th>Type</th>
                                 <th>Description</th>
@@ -159,6 +163,11 @@ const Exercise = () => {
                                     <td>{exercise.id}</td>
                                     <td>
                                         <video src={exercise.media_url} controls className="media" />
+                                    </td>
+                                    <td>
+                                        {exercise.thumbnail_url && (
+                                            <img src={exercise.thumbnail_url} alt="Thumbnail" className="thumbnail" />
+                                        )}
                                     </td>
                                     <td>{exercise.title}</td>
                                     <td>{exercise.type_string}</td>
@@ -215,6 +224,10 @@ const Exercise = () => {
                     <label>
                         Media:
                         <input type="file" name="media_url" onChange={handleFileChange} />
+                    </label>
+                    <label>
+                        Thumbnail:
+                        <input type="file" name="thumbnail_url" onChange={handleFileChange} />
                     </label>
                     {errors.error && <span className="error">{errors.error}</span>}
                     <button type="button" onClick={handleSaveExercise}>{isEditMode ? 'Update' : 'Create'}</button>

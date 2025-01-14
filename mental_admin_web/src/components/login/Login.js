@@ -13,6 +13,7 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         setError('');
+        setMessage('');
 
         try {
             const response = await axios.post(`${process.env.REACT_APP_API_URL}/login`, {
@@ -20,13 +21,17 @@ const Login = () => {
                 password,
             });
 
-            setMessage('Login successful');
+            setMessage(response.data.message); // Thông báo từ server
             setTimeout(() => {
                 navigate('/dashboard');
             }, 500);
         } catch (err) {
-            if (err.response && err.response.data.error) {
-                setError(err.response.data.error);
+            if (err.response && err.response.status === 404) {
+                setError('User not found');
+            } else if (err.response && err.response.status === 403) {
+                setError('User account is disabled');
+            } else if (err.response && err.response.status === 401) {
+                setError('Incorrect password');
             } else {
                 setError('Something went wrong. Please try again later.');
             }

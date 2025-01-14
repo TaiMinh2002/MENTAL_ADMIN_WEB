@@ -32,6 +32,7 @@ const Expert = () => {
         { id: 4, label: 'Behavioral Therapy' },
         { id: 5, label: 'Family & Marriage' },
         { id: 6, label: 'Art & Music' },
+        { id: 6, label: 'Elderly' },
     ];
 
     const fetchExperts = async (currentPage) => {
